@@ -1,5 +1,5 @@
  <?php
-$db = new PDO('mysql:host=localhost;dbname=539197_24_1', '539197_24_1', 'iWKuZB3wYCvj');
+$db = new PDO('', '', '');
 
 $sql = "SELECT * FROM users";
 foreach ($db->query($sql) as $row) {
