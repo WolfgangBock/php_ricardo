@@ -48,24 +48,31 @@ function login($email, $password){
 
 }
 
-
-
-/************************ INSERT BEFEHLE ************************/
-
-
-// Inserieren
-/* Ein neues Inserat wir in der Datenbank gespeichert */
-// save_item() läuft nahezu analog zur save_user()-Funktion ab
-function save_item($user_id, $title, $description, $price, $type, $img_name){
-
-}
-
-// Speichert die item_id-category-Kombination in der Tabelle item_has_category ab.
-function save_item_category($item_id, $category){
-
-}
-
 /************************ SELECT BEFEHLE ************************/
+
+
+// Inserate von Suchen und Bieten auslesen
+function get_all_items(){
+
+}
+
+// Kategorie des Inserates via item_id aus der Tabelle "item_has_category" auslesen
+function get_categories_by_id($id){
+
+}
+
+// Inserate nur von Suchen ODER Bieten auslesen (Je nach ID in der URL Adresse)
+function get_items_by_type($type){
+
+}
+
+// Die get_item_by_id()-Funktion holt alle Daten eines Items zu einer
+//   bestimmten item_id aus der DB-Tabelle 'items' und gibt den Datensatz als
+//   assoziatives Array zurück.
+// Die Bezeichner (keys) des assoziativen Arrays sind die Namen der Tabellenspalten.
+function get_item_by_id($id){
+
+}
 
 // User Daten auslesen
 /* Die Daten des eingeloggten Benutzers werden via User_Id ausgelesen */
@@ -79,23 +86,16 @@ function does_email_exist($email){
 
 }
 
-// Inserate von Suchen und Bieten auslesen
-function get_all_items(){
+// Alle Kategorien auslesen
+function get_all_categories(){
 
 }
 
-// Kategorie des Inserates via item_id aus der Tabelle "item_has_category" auslesen
-function get_categories_by_id($id){
 
-}
 
-// Die get_item_by_id()-Funktion holt alle Daten eines Items zu einer
-//   bestimmten item_id aus der DB-Tabelle 'items' und gibt den Datensatz als
-//   assoziatives Array zurück.
-// Die Bezeichner (keys) des assoziativen Arrays sind die Namen der Tabellenspalten.
-function get_item_by_id($id){
+/************************ INSERT BEFEHLE ************************/
 
-}
+
 
 // Registrieren
 /* Neue Benutzerdaten werden in die User Datenbank gespeichert */
@@ -103,13 +103,15 @@ function save_user($email, $password, $firstname, $lastname){
 
 }
 
-// Inserate nur von Suchen ODER Bieten auslesen (Je nach ID in der URL Adresse)
-function get_items_by_type($type){
+// Inserieren
+/* Ein neues Inserat wir in der Datenbank gespeichert */
+// save_item() läuft nahezu analog zur save_user()-Funktion ab
+function save_item($user_id, $title, $description, $price, $type, $img_name){
 
 }
 
-// Alle Kategorien auslesen
-function get_all_categories(){
+// Speichert die item_id-category-Kombination in der Tabelle item_has_category ab.
+function save_item_category($item_id, $category){
 
 }
 
